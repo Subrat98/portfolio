@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Subrat Pradhan — subrat.dev</title>
+  <meta name="description" content="Personal profile of Subrat Pradhan — Developer, Engineer, Problem solver." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- small placeholder -->
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071023 0%, #071727 100%);color:#e6eef6}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px;border-radius:20px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:112px;height:112px;border-radius:18px;flex:0 0 112px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px}
+    .name{flex:1}
+    .name h1{margin:0;font-size:26px}
+    .name p{margin:6px 0 0;color:var(--muted)}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--accent);color:#052026;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:26px}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);backdrop-filter: blur(6px);box-shadow:0 4px 18px rgba(2,6,23,0.5)}
+
+    .section h2{margin:0 0 12px;font-size:16px}
+    .about p{color:var(--muted);line-height:1.5}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 10px;border-radius:10px;background:var(--glass);font-weight:600;font-size:13px}
+
+    .projects .proj{margin-bottom:12px;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.012), transparent)}
+    .proj h3{margin:0 0 6px;font-size:15px}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+
+    .right .contact-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+    .socials{display:flex;gap:8px;margin-top:10px}
+    .socials a{display:inline-block;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);text-decoration:none;color:var(--muted);font-weight:600}
+
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){
+      main{grid-template-columns:1fr}
+      .avatar{width:88px;height:88px;border-radius:12px}
+      .wrap{margin:18px;padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">SP</div>
+      <div class="name">
+        <h1>Subrat Pradhan</h1>
+        <p>Frontend Developer • Angular &amp; Node.js • Employee Management Systems</p>
+        <div class="cta" style="margin-top:10px">
+          <a class="btn" id="downloadResume">Download Resume</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div style="flex:0 0 120px;text-align:right">
+        <div style="color:var(--muted);font-size:13px">Location</div>
+        <div style="font-weight:700">Bhubaneswar, India</div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section class="card section about">
+          <h2>About</h2>
+          <p>Hi — I'm Subrat. I build user-friendly web applications using Angular, Node.js and modern frontend tools. I love writing clean code, designing intuitive UIs, and improving developer workflows.</p>
+        </section>
+
+        <section class="card section" style="margin-top:16px">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="skill">Angular</div>
+            <div class="skill">TypeScript</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">REST APIs</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Unit Testing</div>
+            <div class="skill">UX Design</div>
+          </div>
+        </section>
+
+        <section class="card section projects" style="margin-top:16px">
+          <h2>Selected Projects</h2>
+          <div class="proj">
+            <h3>Employee Management System</h3>
+            <p>Full-stack EMS with role-based access, dashboard, leave module, reports and PDF payslip generation.</p>
+          </div>
+          <div class="proj">
+            <h3>Point of Sale — Jewellery</h3>
+            <p>Retail POS with barcode scan, advance received module and old purchase handling built with Angular &amp; Node.</p>
+          </div>
+        </section>
+
+        <section class="card section" id="contact" style="margin-top:16px">
+          <h2>Contact</h2>
+          <p style="color:var(--muted)">Want to work together or see code? Send me a message.</p>
+          <form id="contactForm" style="display:grid;gap:8px;margin-top:10px">
+            <input id="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <input id="email" type="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <textarea id="message" placeholder="Message" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn" type="submit">Send</button>
+              <button type="button" class="btn ghost" id="clear">Clear</button>
+            </div>
+            <div id="formStatus" style="color:var(--muted);font-size:13px"></div>
+          </form>
+        </section>
+      </div>
+
+      <aside class="right">
+        <div class="card">
+          <h2>Profile</h2>
+          <div style="color:var(--muted);margin-bottom:10px">Full-stack developer focused on enterprise-grade apps.</div>
+
+          <div style="margin-top:10px">
+            <strong>Experience</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">3+ years building web apps • Team lead experience</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Contact</strong>
+            <div class="contact-row"><span style="color:var(--muted);font-size:13px">Email</span><div style="flex:1;text-align:right">subrat@example.com</div></div>
+            <div class="contact-row"><span style="color:var(--muted);font-size:13px">Phone</span><div style="flex:1;text-align:right">+91 9XXXXXXXXX</div></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Social</strong>
+            <div class="socials">
+              <a href="#" id="github">GitHub</a>
+              <a href="#" id="linkedin">LinkedIn</a>
+              <a href="#" id="twitter">X</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Quick Links</h2>
+          <ul style="margin:0;padding:0;list-style:none;color:var(--muted);font-size:14px">
+            <li>• Portfolio</li>
+            <li>• Resume</li>
+            <li>• Blog</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Built with ❤️ by Subrat — <span id="year"></span>
+    </footer>
+  </div>
+
+  <script>
+    // small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // fake resume download (you can replace with a real file link)
+    document.getElementById('downloadResume').addEventListener('click', function(){
+      const blob = new Blob([`Resume - Subrat Pradhan\n\nSkills:\n- Angular\n- Node.js\n- TypeScript\n`], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'Subrat-Pradhan-Resume.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+
+    // contact form handler (client-side only). Replace with API endpoint for production.
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status = document.getElementById('formStatus');
+      if(!name || !email){ status.textContent = 'Please fill name and email.'; return; }
+      // for now just show success message
+      status.textContent = 'Thanks, ' + name + '! Message noted (client-only).';
+      form.reset();
+    });
+
+    document.getElementById('clear').addEventListener('click', ()=>{ form.reset(); document.getElementById('formStatus').textContent=''; });
+  </script>
+</body>
+</html>
